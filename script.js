@@ -1,18 +1,28 @@
 'use strict';
 
 
-var PlaceHolder = 1;
-let second = 2;
-const pi = 3.14;
-let man = {
-    name: 'Vasiliy',
-    age: 12,
-    isMarried: false
+let money = prompt ("Введите ваш бюджет за месяц?", ''),
+    time = prompt ("Введите дату в формате YYYY-MM-DD", '');
+
+let appData = {
+    budget: money,
+    timeData: time,
+    expenses: {},
+    optionalExpenses: {},
+    income: [],
+    savings: false,
 };
 
-let array = ['orrange.jpeg', 2]
+let a1 = prompt ("Введите обязательную статью расходов в этом месяце", ''),
+    a2 = prompt ("Во сколько обойдётся?", ''),
+    a3 = prompt ("Введите обязательную статью расходов в этом месяце", ''),
+    a4 = prompt ("Во сколько обойдётся?", '');
+    
+appData.expenses.a1=a2;
+appData.expenses.a3=a4;
+alert(appData.budget / 30)
 
-console.log(array[0]);
 
-let a = 7;
-console.log (2 + man.age + a);
+
+
+
