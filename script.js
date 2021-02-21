@@ -55,6 +55,8 @@ let appData = {
     statData: stationar,
 };
 
+appData.budjet = appData.budjet / 6;
+
 if (appData.timeData < 12) {
     appData.budjet = appData.budjet*0.7;
     console.log('Маловато отработал, дружок');
@@ -71,7 +73,7 @@ let count1 = numDays,
     hollidays = 0,
     statMonBu = appData.budjet;
 
-appData.budjet = appData.budjet / dayMonCount * numDays;
+appData.budjet = (appData.budjet / dayMonCount) * numDays;
 
 if ((numDays > 5) && (stationar = 'нет')) {
     count1 = count1 - 7;
@@ -80,11 +82,11 @@ if ((numDays > 5) && (stationar = 'нет')) {
 
 if (stationar = 'нет') {
     numDays = numDays - hollidays;
-    statMonBu = statMonBu / (dayMonCount - hollidays) * numDays;
-    console.log(statMonBu);
+    statMonBu = ((statMonBu / dayMonCount) * (numDays -  hollidays));
+    console.log(Math.round(statMonBu));
     console.log("Это бюджет без стационара");
 } else {
-    console.log(appData.budjet)
+    console.log(Math.round(appData.budjet))
     console.log("Это бюджет со стационаром");
 };
 
