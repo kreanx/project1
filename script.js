@@ -5,7 +5,7 @@
 let money = 0;
 function salaryCount () {
     for (let i = 0; i < 6; i++) {
-        money = money + (+prompt ('Введите ваш доход за месяц'));
+        money = money + (+prompt ('Введите ваш доход за ' + (i+1) + ' месяц'));
         if (i == 5) {
             console.log(money +  'р - это сумма вашей ЗП за 6 месяцев');
             return(money);
