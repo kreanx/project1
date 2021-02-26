@@ -85,10 +85,14 @@ let daysCount = numDays,
     statMonBu = appData.budget,
     finalBudget = (appData.budget / dayMonCount) * numDays;
 
-if ((numDays > 5) && (stationar = 'нет')) {
-    daysCount = daysCount - 7;
-    hollidays = hollidays + 2;
-};
+// Подсчёт выходных при отсутсвии стационара
+function hollidaysCount () {
+    if ((numDays > 5) && (stationar = 'нет')) {
+        daysCount = daysCount - 7;
+        hollidays = hollidays + 2;
+    };
+}
+hollidays();
 
 // Подсчёт больничных в зависимости от наличия стационара
 function calcWithStat () {
@@ -101,7 +105,7 @@ function calcWithStat () {
         console.log(Math.round(finalBudget))
         console.log("Это бюджет со стационаром");
     };
-}
+};
 calcWithStat();
 
 
