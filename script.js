@@ -122,9 +122,9 @@ let hollidays = dateDifference(newDate, lastDate);
 function calcWithStat () {
     if (stationar = 'нет') {
         statMonBu = ((statMonBu / dayMonCount) * (diffDate - hollidays));
-        console.log(Math.round(statMonBu), "это ваши больничные без стационара");
+        console.log(Math.round(statMonBu), " - это ваши больничные без стационара");
     } else {
-        console.log(Math.round(finalBudget), "это ваши больничные, учитывая стационар")
+        console.log(Math.round(finalBudget), " - это ваши больничные, учитывая стационар")
     }
 }
 calcWithStat();
