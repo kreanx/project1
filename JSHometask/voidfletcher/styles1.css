@@ -1,0 +1,80 @@
+@font-face {
+	font-family: MyUniqueFont;
+	src: url('Poppins-Light.ttf');
+}
+
+body {
+    font-family: MyUniqueFont;
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+
+.container {
+    display: flex;
+    margin: 35px 55px;
+    height: 107px;
+    width: 645px;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.containter_items {
+    font-family: MyUniqueFont;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.035em;
+    text-align: justified;
+    color: #071E39; 
+}
+
+.containter_flex {
+    display: flex;
+    width: 127px;
+    height: 56px;
+    right: 0px;
+    top: calc(50% - 56px/2);
+    background: #071E39;
+    border-radius: 18px;
+    font-family: MyUniqueFont;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.035em;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    align-items:center;
+
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    color: #071E39;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.035em;
+}
+
+.maintitle {
+    display: flex;
+   height: 108px;
+   width: 756px;
+
+}
+
