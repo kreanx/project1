@@ -178,3 +178,8 @@ h1.text {
     margin-right: 26px;
 
 }
+.subtext {
+    color: #222222;
+    font-size: 17px;
+    text-align: center;
+}
