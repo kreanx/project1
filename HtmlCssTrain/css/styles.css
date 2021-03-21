@@ -183,3 +183,7 @@ h1.text {
     font-size: 17px;
     text-align: center;
 }
+.mobile{
+  min-height: 864px;
+  padding: 48px 0 79px 0;
+  background: src("../HtmlCssTrain/img/mobile_bg.png");}

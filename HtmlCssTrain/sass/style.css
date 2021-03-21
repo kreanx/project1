@@ -1,5 +1,5 @@
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -15,23 +15,17 @@ nav {
 }
 
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 13px 70px;
   margin: 0;
   list-style-type: none;
 }
-
 .menu .menu_link {
   font-weight: 300;
   font-size: 15px;
   color: #FFFFFF;
 }
-
 .menu .menu_item {
   border-right: 2px dotted #000;
   padding-right: 30px;
@@ -44,20 +38,17 @@ nav {
   width: 100%;
   margin-top: 50px;
 }
-
 .subheader .subheader_logo {
   display: block;
   max-width: 100%;
   margin-top: 16px;
 }
-
 .subheader .subheader_text {
   font-weight: 200;
   font-size: 13px;
   color: #FFFFFF;
   margin-top: 6px;
 }
-
 .subheader .subheader_call {
   font-weight: 300;
   font-size: 12px;
@@ -65,21 +56,17 @@ nav {
   text-align: right;
   margin-top: 22px;
 }
-
 .subheader .subheader_number {
   font-size: 22px;
   text-transform: uppercase;
   color: #FFFFFF;
   margin-top: 3px;
 }
-
 .subheader .subheader_btn {
   width: 172px;
   height: 46px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#1EACC7), to(#4CE2FF));
   background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
-  -webkit-box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   margin-top: 22px;
   color: #FFFFFF;
@@ -93,7 +80,6 @@ nav {
   background: url("../img/uber_bg.jpg") center center/cover no-repeat;
   padding: 150px 0 135px 0;
 }
-
 .promo .promo_header {
   font-weight: 900;
   font-size: 60px;
@@ -103,7 +89,6 @@ nav {
   margin: 0px;
   text-align: center;
 }
-
 .promo .promo_subheader {
   font-size: 36px;
   font-weight: 900;
@@ -114,7 +99,6 @@ nav {
   margin-top: 22px;
   text-align: center;
 }
-
 .promo .promo_descr {
   font-size: 18px;
   line-height: 24px;
@@ -122,15 +106,12 @@ nav {
   text-align: center;
   margin-top: 20px;
 }
-
 .promo .promo_btn {
   display: block;
   width: 259px;
   height: 63px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#1EACC7), to(#4CE2FF));
   background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
-  -webkit-box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   font-size: 18px;
   text-transform: uppercase;
@@ -144,16 +125,10 @@ nav {
 }
 
 .adv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 11px;
   line-height: 11px;
   text-transform: uppercase;
@@ -165,15 +140,9 @@ nav {
 }
 
 .block_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 h1.text {
@@ -207,17 +176,11 @@ h1.text {
 }
 
 .img_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-radius: 100px;
   background: #1EACC7;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 116px;
   height: 116px;
   margin-right: 26px;
@@ -227,5 +190,55 @@ h1.text {
   color: #222222;
   font-size: 17px;
   text-align: center;
+  margin-bottom: 30px;
 }
-/*# sourceMappingURL=style.css.map */
+
+.mobile {
+  min-height: 864px;
+  padding: 48px 0 79px 0;
+  background: url("../img/mobile_bg.png") center center/cover no-repeat;
+}
+.mobile .row {
+  margin-top: 32px;
+}
+.mobile_item {
+  width: 320px;
+  height: 280px;
+  margin: 0 auto;
+  margin-bottom: 19px;
+  padding-top: 92px;
+  position: relative;
+}
+.mobile_item_1 {
+  background: url("../img/card_bg_1.png") center center/cover no-repeat;
+}
+.mobile_item_2 {
+  background: url("../img/card_bg_2.png") center center/cover no-repeat;
+}
+.mobile_item_3 {
+  background: url("../img/card_bg_3.png") center center/cover no-repeat;
+}
+.mobile_item_4 {
+  background: url("../img/card_bg_4.png") center center/cover no-repeat;
+}
+.mobile_item_5 {
+  background: url("../img/card_bg_5.png") center center/cover no-repeat;
+}
+.mobile_item_6 {
+  background: url("../img/card_bg_6.png") center center/cover no-repeat;
+}
+.mobile_item_subtitle {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.mobile_item_plus {
+  width: 29px;
+  height: 29px;
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translate(-50%);
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
