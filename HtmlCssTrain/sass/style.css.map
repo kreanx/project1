@@ -5,8 +5,10 @@
         "style.sass",
         "_variables.sass",
         "_mixins.sass",
-        "_general.sass"
+        "_general.sass",
+        "_media.sass"
+        
     ],
     "names": [],
-    "file": "style.css"
+    "file": "style.min.css"
 }
