@@ -17,4 +17,16 @@
         font-size: 16px;
         
     }
+    &_mini {
+            width: 135px;
+            height: 44px;
+            background: $main-color;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5%;
+    }
 }
