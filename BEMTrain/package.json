@@ -1,7 +1,6 @@
 {
   "name": "bemtrain",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +18,6 @@
   },
   "dependencies": {
     "jshint": "^2.12.0"
-  }
+  },
+  "description": ""
 }
