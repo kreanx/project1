@@ -26,16 +26,21 @@
 
 
 
+let 
+dayMonCount = 0,
+newDate = new Date(prompt('Введите дату начала больничного в формате YYYY-MM-DD', ''));
 
 
-    function salaryCount () {
-        let money = 0,
-            input = prompt('Введите вашу зарплату за ближайшие 6 месяцев через проблел', ''),
-            cash = input.split(' ');
-        for (let i = 0; i < 6; i++) {
-             money = money + parseInt(cash[i]);
+
+let Leap = function () {
+    let ily = function() {
+        return !(newDate.getFullYear() & 3 || !(newDate.getFullYear() % 25) && newDate.getFullYear() & 15);
+    };
+    if (ily() == true) {
+        dayMonCount = 29} 
+        else {
+            dayMonCount = 28
         };
-        return(money)
-}
-
-console.log(salaryCount())
+    return dayMonCount;
+};
+console.log(Leap())

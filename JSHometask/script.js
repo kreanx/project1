@@ -17,56 +17,43 @@ function main() {
 
     // Подсчёт суммы ЗП за 6 месяцев
     function salaryCount_f () { 
-        let money = 0,
+        let 
             input = prompt('Введите вашу зарплату за ближайшие 6 месяцев через проблел', ''),
-            cash = input.split(' ');
-        for (let i = 0; i < 6; i++) { //reduce OK
-                money = money + parseInt(cash[i]);
-        };
-        return(money)
+            cash = input.split(' '),
+            money = cash.reduce((sum, current) => sum + parseInt(current), 0);
+        return(money);
     }
     let salaryCount = salaryCount_f();
     console.log(salaryCount)
 
-    //Проверка на стационар
-    function stationar () {
-        return confirm('Нужен ли стационар?') //возможно OK
-    }
-
     //Ввод пользователем данных, связанных со временем
     let time = +prompt ("Введите ваш рабочий стаж в формате X месяцев", ''),
+        stationar = confirm('Нужен ли стационар?'), 
         dayMonCount = 0,
         newDate = new Date(prompt('Введите дату начала больничного в формате YYYY-MM-DD', '')),
         lastDate = new Date(prompt('Введите конца начала больничного в формате YYYY-MM-DD', '')),
         diffDate = (lastDate - newDate) / (1000*60*60*24);  //Срок больничного в днях здесь? 
 
+
     // Расчёт количества дней в месяце
     function daysInMonth() {
         let t = newDate.getMonth();
         switch (t) {
-            case 0: dayMonCount = 31;
+            case 0: case 2: case 4: case 6: case 7: case 9: case 11: dayMonCount = 31;
                 break;
-            case 1: dayMonCount = 28;
+            case 1: let Leap = function () {
+                let ily = function() {
+                    return !(newDate.getFullYear() & 3 || !(newDate.getFullYear() % 25) && newDate.getFullYear() & 15);
+                };
+                if (ily () == true) {
+                    dayMonCount = 29} 
+                    else {
+                        dayMonCount = 28
+                    };
+                return dayMonCount;
+            };
                 break;
-            case 2: dayMonCount = 31;
-                break;
-            case 3: dayMonCount = 30;
-                break;
-            case 4: dayMonCount = 31; //date + num + group Ok
-                break;
-            case 5: dayMonCount = 30;
-                break;
-            case 6: dayMonCount = 31;
-                break;
-            case 7: dayMonCount = 31;
-                break;
-            case 8: dayMonCount = 30;
-                break;
-            case 9: dayMonCount = 31;
-                break;
-            case 10: dayMonCount = 30;
-                break;
-            case 11: dayMonCount = 31;
+            case 3: case 5: case 8: case 10: dayMonCount = 30;
                 break;
         }
     }
@@ -90,7 +77,7 @@ function main() {
         }
     }
     workTimeCount();
-    console.log(Math.round(budget) + 'р - накопления с вычетом процента'); //исправлю tofixed
+    console.log(budget.toFixed() + 'р - накопления с вычетом процента');
 
     let statMonBu = budget,
         finalBudget = (budget / dayMonCount) * diffDate;
@@ -122,11 +109,11 @@ function main() {
         let weekEndDays = totalDays - days + addOneMoreDay;
         return weekEndDays;
     }
-    let hollidays = dateDifference(newDate, lastDate); //тут всё идеально ещё раз? да
+    let hollidays = dateDifference(newDate, lastDate); 
 
     // Подсчёт больничных в зависимости от наличия стационара
     function calcWithStat () {
-        if (stationar() == false) {
+        if (stationar == false) {
             statMonBu = ((statMonBu / dayMonCount) * (diffDate - hollidays));
             console.log(Math.round(statMonBu) + 'р - это ваши больничные без стационара');
         } else {
